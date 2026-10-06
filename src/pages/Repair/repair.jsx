@@ -66,7 +66,7 @@ const Repair = () => {
         </div>
         <div className="pas_img mt-10">
           <div className="img1">
-            <img src="/site-media-052.jpg" alt="" />
+            <img src="" alt="" />
           </div>
           <div className="imgs flex">
             <img src="/site-media-049.png" alt="" />
