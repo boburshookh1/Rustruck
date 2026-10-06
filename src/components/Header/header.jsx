@@ -214,7 +214,7 @@ const Header = (props) => {
 
                     <div className="flex flex-col gap-[20px]">
                         <a href="/xizmat-markazi" onClick={(event) => { event.preventDefault(); navigateAndClose("/xizmat-markazi"); }} className="text-[20px] font-[700] font-['Fira_Sans']">{t("menu_service")}</a>
-                        <a href="/ta-mirlash-xizmati" onClick={(event) => { event.preventDefault(); navigateAndClose("/ta-mirlash-xizmati"); }} className="text-[20px] font-[700] font-['Fira_Sans']">{t("menu_repair")}</a>
+                        <a href="/tamirlash-xizmati" onClick={(event) => { event.preventDefault(); navigateAndClose("/tamirlash-xizmati"); }} className="text-[20px] font-[700] font-['Fira_Sans']">{t("menu_repair")}</a>
                         <a href="/yangiliklar-markazi" onClick={(event) => { event.preventDefault(); navigateAndClose("/yangiliklar-markazi"); }} className="text-[20px] font-[700] font-['Fira_Sans']">{t("menu_news")}</a>
                         <a href="/boglanish" onClick={(event) => { event.preventDefault(); navigateAndClose("/boglanish"); }} className="text-[20px] font-[700] font-['Fira_Sans']">{t("menu_contacts")}</a>
                     </div>
@@ -229,7 +229,7 @@ const Header = (props) => {
             <ul className="mobile_menu_list">
                 <li>
                     <button onClick={() => toggleMobileSub("lang")}>
-                        {labels[lang] || lang?.toUpperCase()}   
+                        {labels[lang] || lang?.toUpperCase()}
                         <ChevronIcon open={mobileSubOpen === "lang"} />
                     </button>
                     {mobileSubOpen === "lang" && (
@@ -322,233 +322,233 @@ const Header = (props) => {
                     <div className="header_top_inner">
                         <div className="container">
                             <div className="header_top">
-                    <div className="header_logo flex items-center">
-                        <a className="logo" href="/">
-                            <img src="./site-media-046.png" alt=""  className="w-[160px] h-[45px]" />
-                        </a>
-                        <span className="divider"></span>
-                        <div className="texxt max-w-[167px]">
-                            <p className="text-[14px] font-normal font-['Fira_Sans']">{t("company_slogan")}</p>
-                        </div>
-                    </div>
-                    <div className="salom flex items-center gap-[61px]">
-                        <div className="header_contact flex flex-col gap-[5px] ">
-                            <p className="text-[16px] font-normal font-['Fira_Sans']">{t("work_time_label")}</p>
-                            <p className="text-[15px] font-normal font-['Fira_Sans'] text-[#A1A1A1]">{t("address")}</p>
-                        </div>
-                        <div className="header_phone flex items-center gap-[10px]">
-                            <div className="texttt">
-                                <p className="text-[15px] font-normal font-['Fira_Sans'] text-[#A1A1A1]">{t("phone_regions_label")} {t("phone_regions")}</p>
-                                <p className="text-[15px] font-normal font-['Fira_Sans'] text-[#A1A1A1]">{t("phone_nn_label")} {t("phone_nn")}</p>
-                            </div>
-                            <button
-                                type="button"
-                                className="img call_trigger"
-                                onClick={() => setCallModalOpen(true)}
-                                aria-label="Заказать звонок"
-                            >
-                                <img src="./site-media-043.png" alt="" />
-                            </button>
-                        </div>
+                                <div className="header_logo flex items-center">
+                                    <a className="logo" href="/">
+                                        <img src="./site-media-046.png" alt="" className="w-[160px] h-[45px]" />
+                                    </a>
+                                    <span className="divider"></span>
+                                    <div className="texxt max-w-[167px]">
+                                        <p className="text-[14px] font-normal font-['Fira_Sans']">{t("company_slogan")}</p>
+                                    </div>
+                                </div>
+                                <div className="salom flex items-center gap-[61px]">
+                                    <div className="header_contact flex flex-col gap-[5px] ">
+                                        <p className="text-[16px] font-normal font-['Fira_Sans']">{t("work_time_label")}</p>
+                                        <p className="text-[15px] font-normal font-['Fira_Sans'] text-[#A1A1A1]">{t("address")}</p>
+                                    </div>
+                                    <div className="header_phone flex items-center gap-[10px]">
+                                        <div className="texttt">
+                                            <p className="text-[15px] font-normal font-['Fira_Sans'] text-[#A1A1A1]">{t("phone_regions_label")} {t("phone_regions")}</p>
+                                            <p className="text-[15px] font-normal font-['Fira_Sans'] text-[#A1A1A1]">{t("phone_nn_label")} {t("phone_nn")}</p>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            className="img call_trigger"
+                                            onClick={() => setCallModalOpen(true)}
+                                            aria-label="Заказать звонок"
+                                        >
+                                            <img src="./site-media-043.png" alt="" />
+                                        </button>
+                                    </div>
 
-                        <div className="lang_switcher relative" ref={langRef}>
-                            <button
-                                type="button"
-                                className="flex items-center gap-[6px] text-[15px] font-[500] font-['Fira_Sans'] border-[1px] border-[#FEC80B] rounded-[4px] px-[12px] py-[6px] cursor-pointer bg-white"
-                                onClick={() => setLangMenuOpen((prev) => !prev)}
-                            >
-                                {labels[lang] || lang?.toUpperCase()}
-                                <svg
-                                    className={`w-[16px] h-[16px] text-[#FEC80B] transition-transform ${langMenuOpen ? "rotate-180" : ""}`}
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                </svg>
-                            </button>
-                            {langMenuOpen && (
-                                <ul className="absolute right-0 top-[calc(100%+6px)] bg-white border-[1px] border-[#eee] rounded-[6px] shadow-md z-50 min-w-[70px] overflow-hidden">
-                                    {langs.map((code) => (
-                                        <li key={code}>
-                                            <button
-                                                type="button"
-                                                className={`w-full text-left px-[14px] py-[8px] text-[14px] font-['Fira_Sans'] cursor-pointer hover:bg-[#FEC80B]/20 ${lang === code ? "font-[700] text-[#000]" : "text-[#555]"}`}
-                                                onClick={() => {
-                                                    setLang(code);
-                                                    setLangMenuOpen(false);
-                                                }}
+                                    <div className="lang_switcher relative" ref={langRef}>
+                                        <button
+                                            type="button"
+                                            className="flex items-center gap-[6px] text-[15px] font-[500] font-['Fira_Sans'] border-[1px] border-[#FEC80B] rounded-[4px] px-[12px] py-[6px] cursor-pointer bg-white"
+                                            onClick={() => setLangMenuOpen((prev) => !prev)}
+                                        >
+                                            {labels[lang] || lang?.toUpperCase()}
+                                            <svg
+                                                className={`w-[16px] h-[16px] text-[#FEC80B] transition-transform ${langMenuOpen ? "rotate-180" : ""}`}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
                                             >
-                                                {labels[code] || code?.toUpperCase()}
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    </div>
+                                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                            </svg>
+                                        </button>
+                                        {langMenuOpen && (
+                                            <ul className="absolute right-0 top-[calc(100%+6px)] bg-white border-[1px] border-[#eee] rounded-[6px] shadow-md z-50 min-w-[70px] overflow-hidden">
+                                                {langs.map((code) => (
+                                                    <li key={code}>
+                                                        <button
+                                                            type="button"
+                                                            className={`w-full text-left px-[14px] py-[8px] text-[14px] font-['Fira_Sans'] cursor-pointer hover:bg-[#FEC80B]/20 ${lang === code ? "font-[700] text-[#000]" : "text-[#555]"}`}
+                                                            onClick={() => {
+                                                                setLang(code);
+                                                                setLangMenuOpen(false);
+                                                            }}
+                                                        >
+                                                            {labels[code] || code?.toUpperCase()}
+                                                        </button>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            {callModalOpen && createPortal(
-                <div className="call_modal_overlay" onClick={() => setCallModalOpen(false)}>
-                    <div className="call_modal" onClick={(event) => event.stopPropagation()}>
-                        <button
-                            type="button"
-                            className="call_modal_close"
-                            onClick={() => setCallModalOpen(false)}
-                            aria-label="Закрыть"
-                        >
-                            ×
-                        </button>
+                {callModalOpen && createPortal(
+                    <div className="call_modal_overlay" onClick={() => setCallModalOpen(false)}>
+                        <div className="call_modal" onClick={(event) => event.stopPropagation()}>
+                            <button
+                                type="button"
+                                className="call_modal_close"
+                                onClick={() => setCallModalOpen(false)}
+                                aria-label="Закрыть"
+                            >
+                                ×
+                            </button>
 
-                        <h3 className="call_modal_title">Заказать звонок</h3>
-                        <p className="call_modal_subtitle">Наш менеджер свяжется с Вами в ближайшее время</p>
+                            <h3 className="call_modal_title">Заказать звонок</h3>
+                            <p className="call_modal_subtitle">Наш менеджер свяжется с Вами в ближайшее время</p>
 
-                        <form className="call_modal_form" onSubmit={handleCallSubmit}>
-                            <label className="call_field">
-                                <span>Ваше имя</span>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={callForm.name}
-                                    onChange={handleCallChange}
-                                    placeholder="Иван"
-                                />
-                            </label>
+                            <form className="call_modal_form" onSubmit={handleCallSubmit}>
+                                <label className="call_field">
+                                    <span>Ваше имя</span>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={callForm.name}
+                                        onChange={handleCallChange}
+                                        placeholder="Иван"
+                                    />
+                                </label>
 
-                            <label className="call_field">
-                                <span>Телефон</span>
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    value={callForm.phone}
-                                    onChange={handleCallChange}
-                                    placeholder="+7"
-                                />
-                            </label>
+                                <label className="call_field">
+                                    <span>Телефон</span>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={callForm.phone}
+                                        onChange={handleCallChange}
+                                        placeholder="+7"
+                                    />
+                                </label>
 
-                            <label className="call_checkbox">
-                                <input
-                                    type="checkbox"
-                                    name="consent"
-                                    checked={callForm.consent}
-                                    onChange={handleCallChange}
-                                />
-                                <span>Я согласен на обработку персональных данных</span>
-                            </label>
+                                <label className="call_checkbox">
+                                    <input
+                                        type="checkbox"
+                                        name="consent"
+                                        checked={callForm.consent}
+                                        onChange={handleCallChange}
+                                    />
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
 
-                            <button type="submit" className="call_submit_btn">Оставить заявку</button>
-                        </form>
-
-                        <div className="call_modal_footer">
-                            <span>Для регионов: 8 (800) 511-05-25</span>
-                            <span>Нижний Новгород: 8 (831) 235-26-16</span>
-                        </div>
-                    </div>
-                </div>,
-                document.body
-            )}
-
-            <div className="section header_nav_section border-t-[1px] border-[#FEC80B]">
-                <div className="container">
-                    <div className="header_bottom flex items-center justify-between py-[1px]">
-                        <div className="sa flex items-center gap-[30px]" ref={menuRef}>
-                            <img src="./site-media-046.png" alt="" className="mini_logo" />
-
-                            <div className="relative">
-                                <button
-                                    type="button"
-                                    className={`catalog_btn flex items-center gap-[8px] bg-[#FEC80B] rounded-[4px] w-[132px] h-[42px] shrink-0 font-normal text-[18px] font-['Fira_Sans'] text-[#000000] cursor-pointer ${isCatalogMenuOpen ? "is-open" : ""}`}
-                                    onClick={handleCatalogClick}
-                                    aria-label={t("catalog")}
-                                    aria-expanded={isCatalogMenuOpen}
-                                >
-                                    <CatalogToggleIcon open={isCatalogMenuOpen} />
-                                    <span className="catalog_label">{t("catalog")}</span>
-                                </button>
-
-                                {openMenu === "catalog" && <MegaMenuContent />}
-                            </div>
-
-                            <nav className="nav_menu flex items-center gap-[28px]">
-                                <div className="relative">
-                                    <button
-                                        className="flex items-center gap-[4px] text-[15px] font-normal font-['Fira_Sans']"
-                                        onClick={() => toggleMenu("onas")}
-                                    >
-                                        {t("about_us")}
-                                        <svg
-                                            className={`w-[30px] h-[40px] text-[#FEC80B] transition-transform ${openMenu === "onas" ? "rotate-180" : ""}`}
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                        </svg>
-                                    </button>
-
-                                    {openMenu === "onas" && <MegaMenuContent />}
-                                </div>
-                                <div className="relative">
-                                    <button
-                                        className="flex items-center gap-[4px] text-[15px] font-normal font-['Fira_Sans']"
-                                        onClick={() => toggleMenu("media")}
-                                    >
-                                        {t("media")}
-                                        <svg
-                                            className={`w-[30px] h-[40px] text-[#FEC80B] transition-transform ${openMenu === "media" ? "rotate-180" : ""}`}
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path fill="currentColor" d="M7 10l5 5 5-5z" />
-                                        </svg>
-                                    </button>
-
-                                    {openMenu === "media" && <MegaMenuContent />}
-                                </div>
-                                <a href="/xizmat-markazi" className="text-sm-base font-normal font-primary">{t("service")}</a>
-                                <a href="/ta-mirlash-xizmati" className="text-[15px] font-normal font-primary">{t("repair")}</a>
-                                <a href="/yangiliklar-markazi" className="text-[15px] font-normal font-primary">{t("news")}</a>
-                                <a href="/boglanish" className="text-[15px] font-normal font-primary">{t("contacts")}</a>
-                            </nav>
-                        </div>
-
-                        <div className="header_actions flex items-center gap-5">
-                            <form className={`search_box relative ${mobileSearchOpen ? "search_open" : ""}`} ref={searchRef} onSubmit={handleSearchSubmit}>
-                                <input
-                                    ref={searchInputRef}
-                                    type="search"
-                                    value={searchQuery}
-                                    onChange={(event) => setSearchQuery(event.target.value)}
-                                    placeholder={t("search_placeholder")}
-                                    className="w-70 h-11 rounded-[30px] border border-[#FEC80B] px-5 pr-12 text-[14px] font-['Fira_Sans'] outline-none"
-                                />
-                                <button type="button" className="search_submit" onClick={handleSearchIconClick} aria-label={t("search_placeholder")}>
-                                    <i className="fa-solid fa-magnifying-glass"></i>
-                                </button>
+                                <button type="submit" className="call_submit_btn">Оставить заявку</button>
                             </form>
 
-                            <button type="button" className="cart_btn" onClick={() => navigate("/savat")} aria-label={t("cart_title")}>
-                                <i className="fa-solid fa-cart-shopping w-7.5 h-7.5"></i>
-                            </button>
+                            <div className="call_modal_footer">
+                                <span>Для регионов: 8 (800) 511-05-25</span>
+                                <span>Нижний Новгород: 8 (831) 235-26-16</span>
+                            </div>
+                        </div>
+                    </div>,
+                    document.body
+                )}
 
-                            <button className="fav_btn">
-                                <i className="fa-regular fa-heart w-7.5 h-7.5"></i>
-                            </button>
+                <div className="section header_nav_section border-t-[1px] border-[#FEC80B]">
+                    <div className="container">
+                        <div className="header_bottom flex items-center justify-between py-[1px]">
+                            <div className="sa flex items-center gap-[30px]" ref={menuRef}>
+                                <img src="./site-media-046.png" alt="" className="mini_logo" />
 
-                            <button
-                                type="button"
-                                className="call_mini"
-                                onClick={() => setCallModalOpen(true)}
-                                aria-label="Заказать звонок"
-                            >
-                                <img src="./site-media-043.png" alt="" />
-                            </button>
+                                <div className="relative">
+                                    <button
+                                        type="button"
+                                        className={`catalog_btn flex items-center gap-[8px] bg-[#FEC80B] rounded-[4px] w-[132px] h-[42px] shrink-0 font-normal text-[18px] font-['Fira_Sans'] text-[#000000] cursor-pointer ${isCatalogMenuOpen ? "is-open" : ""}`}
+                                        onClick={handleCatalogClick}
+                                        aria-label={t("catalog")}
+                                        aria-expanded={isCatalogMenuOpen}
+                                    >
+                                        <CatalogToggleIcon open={isCatalogMenuOpen} />
+                                        <span className="catalog_label">{t("catalog")}</span>
+                                    </button>
+
+                                    {openMenu === "catalog" && <MegaMenuContent />}
+                                </div>
+
+                                <nav className="nav_menu flex items-center gap-[28px]">
+                                    <div className="relative">
+                                        <button
+                                            className="flex items-center gap-[4px] text-[15px] font-normal font-['Fira_Sans']"
+                                            onClick={() => toggleMenu("onas")}
+                                        >
+                                            {t("about_us")}
+                                            <svg
+                                                className={`w-[30px] h-[40px] text-[#FEC80B] transition-transform ${openMenu === "onas" ? "rotate-180" : ""}`}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                            </svg>
+                                        </button>
+
+                                        {openMenu === "onas" && <MegaMenuContent />}
+                                    </div>
+                                    <div className="relative">
+                                        <button
+                                            className="flex items-center gap-[4px] text-[15px] font-normal font-['Fira_Sans']"
+                                            onClick={() => toggleMenu("media")}
+                                        >
+                                            {t("media")}
+                                            <svg
+                                                className={`w-[30px] h-[40px] text-[#FEC80B] transition-transform ${openMenu === "media" ? "rotate-180" : ""}`}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+                                            </svg>
+                                        </button>
+
+                                        {openMenu === "media" && <MegaMenuContent />}
+                                    </div>
+                                    <a href="/xizmat-markazi" className="text-sm-base font-normal font-primary">{t("service")}</a>
+                                    <a href="/ta-mirlash-xizmati" className="text-[15px] font-normal font-primary">{t("repair")}</a>
+                                    <a href="/yangiliklar-markazi" className="text-[15px] font-normal font-primary">{t("news")}</a>
+                                    <a href="/boglanish" className="text-[15px] font-normal font-primary">{t("contacts")}</a>
+                                </nav>
+                            </div>
+
+                            <div className="header_actions flex items-center gap-5">
+                                <form className={`search_box relative ${mobileSearchOpen ? "search_open" : ""}`} ref={searchRef} onSubmit={handleSearchSubmit}>
+                                    <input
+                                        ref={searchInputRef}
+                                        type="search"
+                                        value={searchQuery}
+                                        onChange={(event) => setSearchQuery(event.target.value)}
+                                        placeholder={t("search_placeholder")}
+                                        className="w-70 h-11 rounded-[30px] border border-[#FEC80B] px-5 pr-12 text-[14px] font-['Fira_Sans'] outline-none"
+                                    />
+                                    <button type="button" className="search_submit" onClick={handleSearchIconClick} aria-label={t("search_placeholder")}>
+                                        <i className="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </form>
+
+                                <button type="button" className="cart_btn" onClick={() => navigate("/savat")} aria-label={t("cart_title")}>
+                                    <i className="fa-solid fa-cart-shopping w-7.5 h-7.5"></i>
+                                </button>
+
+                                <button className="fav_btn">
+                                    <i className="fa-regular fa-heart w-7.5 h-7.5"></i>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    className="call_mini"
+                                    onClick={() => setCallModalOpen(true)}
+                                    aria-label="Заказать звонок"
+                                >
+                                    <img src="./site-media-043.png" alt="" />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             {mobileMenuOpen && <MobileMenu />}
