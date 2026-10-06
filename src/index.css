@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+    --font-primary: "Fira Sans", sans-serif;
+    --font-sans: "Fira Sans", sans-serif;
+    --text-sm-base: 15px;
+}
+
+:root {
+    --font-fira: "Fira Sans", sans-serif;
+    --font-sans: "Fira Sans", sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    overflow-x: hidden;
+    color: #111;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    width: min(100%, 1600px);
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media(min-width:768px){.profits-sticky{position:sticky;top:96px;height:calc(100vh - 96px);min-height:620px}}
